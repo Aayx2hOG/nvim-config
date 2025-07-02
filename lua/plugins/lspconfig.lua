@@ -25,7 +25,7 @@ return {
                     "emmet_language_server",
                     "htmx",
                     "tailwindcss",
-                    "ts_ls",
+                    -- "ts_ls",
                     "astro",
                     "rust_analyzer",
                     "ols",
@@ -237,36 +237,36 @@ return {
                 filetypes = { "templ" },
             })
 
-            if not configs.ts_ls then
-                configs.ts_ls = {
-                    default_config = {
-                        cmd = { "typescript-language-server", "--stdio" },
-                        capabilties = capabilities,
-                        filetypes = {
-                            "javascript",
-                            "javascriptreact",
-                            "typescript",
-                            "typescriptreact",
-                            "html",
-                        },
-                        root_dir = require("lspconfig").util.root_pattern("package.json", "tsconfig.json", ".git"),
-                        single_file_support = true,
-                    },
-                }
-            end
-            lspconfig.ts_ls.setup({
-                capabilties = capabilities,
-                cmd = { "typescript-language-server", "--stdio" },
-                filetypes = {
-                    "javascript",
-                    "javascriptreact",
-                    "typescript",
-                    "typescriptreact",
-                    "html",
-                },
-                root_dir = require("lspconfig").util.root_pattern("package.json", "tsconfig.json", ".git"),
-                single_file_support = true,
-            })
+            -- if not configs.ts_ls then
+            --     configs.ts_ls = {
+            --         default_config = {
+            --             cmd = { "typescript-language-server", "--stdio" },
+            --             capabilties = capabilities,
+            --             filetypes = {
+            --                 "javascript",
+            --                 "javascriptreact",
+            --                 "typescript",
+            --                 "typescriptreact",
+            --                 "html",
+            --             },
+            --             root_dir = require("lspconfig").util.root_pattern("package.json", "tsconfig.json", ".git"),
+            --             single_file_support = true,
+            --         },
+            --     }
+            -- end
+            -- lspconfig.ts_ls.setup({
+            --     capabilties = capabilities,
+            --     cmd = { "typescript-language-server", "--stdio" },
+            --     filetypes = {
+            --         "javascript",
+            --         "javascriptreact",
+            --         "typescript",
+            --         "typescriptreact",
+            --         "html",
+            --     },
+            --     root_dir = require("lspconfig").util.root_pattern("package.json", "tsconfig.json", ".git"),
+            --     single_file_support = true,
+            -- })
             -- lspconfig.eslint.setup({
             --     capabilties = capabilities,
             -- })
