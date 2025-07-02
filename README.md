@@ -1,8 +1,3 @@
-# My Nvim Config
+prerequisites for this configuration:
 
-A bloated config with minimal flashiness.
-
-![preview 1](assets/ss1.png)
-![preview 2](assets/ss2.png)
-![preview 3](assets/ss3.png)
-![preview 4](assets/ss4.png)
+ripgrep, imagemagick, cmake and all the languages you want to use (eg npm, nodejs rust, go, python3, clangd, etc)
